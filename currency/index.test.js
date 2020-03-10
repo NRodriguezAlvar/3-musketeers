@@ -1,5 +1,6 @@
 const currency = require('./');
 const nock = require('nock');
+const ora = require("ora");
 
 beforeEach(() => {
   nock('https://api.exchangeratesapi.io')
@@ -118,7 +119,7 @@ describe("currency", () => {
       error = e;
     }
     expect(error).toEqual(
-      new Error("Unknown `from` or `to` currency value !")
+      new Error("💵 Please specify a valid `from` and/or `to` currency value!")
     );
   });
 });
