@@ -5,6 +5,7 @@ const ora = require('ora');
 
 const argv = process.argv.slice(2);
 
+// Creates help : we can execute "node cli.js --help" on the cmd.
 function help () {
   console.log(
     [
